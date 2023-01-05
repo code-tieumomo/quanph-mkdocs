@@ -1,0 +1,63 @@
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+    .md-container {
+        background-size: cover;
+        background-position: center;
+        justify-content: flex-end;
+        padding: 4rem 2rem;
+    }
+
+    [data-md-color-scheme="default"] .md-container {
+        background-image: url("images/hero-light.jpg");
+    }
+
+    [data-md-color-scheme="slate"] .md-container {
+        background-image: url("images/hero-dark.jpg");
+    }
+
+    .md-header {
+        position: fixed;
+    }
+
+    [data-md-color-scheme="slate"] .md-header {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .md-main {
+        flex-grow: 0;
+        height: 0;
+    }
+
+    @media screen and (min-width: 76.1875em) {
+        .md-main {
+            display: none;
+        }
+    }
+
+    .md-main__inner {
+        margin: 0
+    }
+
+    .md-tabs {
+        background-color: transparent;
+    }
+</style>
+<section class="mdx-container">
+    <div class="md-grid md-typeset">
+        <div class="mdx-hero">
+            <div class="mdx-hero__content">
+                <h1>quanph</h1>
+                <p>{{ config.site_description }}.</p>
+                <a href="/laravel/" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+                    Getting started
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
