@@ -1,0 +1,21 @@
+/* Left space of site title and logo */
+[dir="ltr"] .md-header__title {
+    margin-left: 0;
+}
+
+/* Icon size */
+.md-icon svg {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+/* Search icon in searchbar */
+[dir="ltr"] .md-search__icon[for="__search"] {
+    display: flex;
+    align-items: center;
+}
+
+/* Searchbar font size */
+.md-search__input {
+    font-size: 0.625rem;
+}
